@@ -138,12 +138,7 @@ function showModal(tax) {
 }
 
 
-function showModal(tax) {
-  const modal = $('#modal');
-  const taxResult = $('#taxResult');
-  taxResult.text("Tax to be paid: " + tax.toFixed(2) + " Lakhs");
-  modal.css('display', 'block');
-}
+
 
 function closeModal() {
   $('#modal').css('display', 'none');
