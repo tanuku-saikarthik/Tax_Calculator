@@ -11,12 +11,31 @@ $(document).ready(function() {
     ageErrorElement: $('#ageError')
   };
 
-  // Event listener for form submission
+
+    $("#incomeinfo").hover(function() {
+        $("#infoBox").css("display", "block");
+    }, function() {
+        $("#infoBox").css("display", "none");
+    });
+
+    $("#extrainfo").hover(function() {
+      $("#infoBoxe").css("display", "block");
+  }, function() {
+      $("#infoBoxe").css("display", "none");
+  });
+
+  $("#deductionsinfo").hover(function() {
+    $("#infoBoxd").css("display", "block");
+}, function() {
+    $("#infoBoxd").css("display", "none");
+});
+
+
+  
   $('#submitBtn').on('click', function() {
     validateForm(elements);
   });
 
-  // Event listeners for input fields
   elements.incomeInput.on('input', function() {
     validateInput(elements.incomeInput, elements.incomeErrorElement);
   });
@@ -125,7 +144,11 @@ function calculateTax(totalIncome, ageGroup) {
 function showModal(tax) {
   const modal = $('#modal');
   const taxResult = $('#taxResult');
-  taxResult.text("Tax to be paid: " + tax.toFixed(2) + " Lakhs");
+  if(tax === 0)
+  {
+    taxResult.text("Your overall income will be: " + tax.toFixed(2) + " Lakhs");
+  }
+  taxResult.text("Your overall income will be: " + tax.toFixed(2) + " Lakhs");
   modal.css('display', 'block');
 }
 
