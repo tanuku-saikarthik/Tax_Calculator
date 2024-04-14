@@ -97,3 +97,20 @@ body {
     margin-top: 20px;
   }
 }
+
+
+   /* Error Tooltip Styles */
+    .error-tooltip {
+      position: absolute;
+      background-color: #dc3545;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      display: none;
+      z-index: 1;
+    }
+
+    .input-group-text:hover .error-tooltip {
+      display: block;
+    }
