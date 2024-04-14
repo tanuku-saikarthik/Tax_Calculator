@@ -9,62 +9,57 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-6" id="tax_calculator">
-      <form id="taxForm">
-        <div class="form-group">
-          <label for="income">Gross Annual Income:</label>
-          <div class="input-group">
-            <input type="text" id="income" name="income" class="form-control" required>
-            <div class="input-group-append">
-              <span class="input-group-text error-icon" id="incomeError" title="Income must be a number">&#9888;<span class="error-tooltip">Enter only integers</span></span>
-            </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6" id="tax_calculator">
+        <form id="taxForm">
+          <div class="form-group">
+            <label for="income">Gross Annual Income:
+              <span id="incomeinfo">?</span>
+          </label>
+          <div id="infoBox">Total salary in a year before any deductions</div>
+            <input type="text" id="income" name="income" class="form-control" required title="Income must be a number">
           </div>
-        </div>
-
-        <div class="form-group">
-          <label for="extraIncome">Extra Income:</label>
-          <div class="input-group">
-            <input type="text" id="extraIncome" name="extraIncome" class="form-control">
-            <div class="input-group-append">
-              <span class="input-group-text error-icon" id="extraIncomeError" title="Extra income must be a number">&#9888;<span class="error-tooltip">Enter only integers</span></span>
-            </div>
+  
+          <div class="form-group">
+            <label for="extraIncome">Extra Income:
+              <span id="extrainfo">?</span>
+            </label>
+            <div id="infoBoxe">Additional earnings beyond primary income.</div>
+            <input type="text" id="extraIncome" name="extraIncome" class="form-control" title="Extra income must be a number">
           </div>
-        </div>
-
-        <div class="form-group">
-          <label for="deductions">Deductions:</label>
-          <div class="input-group">
-            <input type="text" id="deductions" name="deductions" class="form-control">
-            <div class="input-group-append">
-              <span class="input-group-text error-icon" id="deductionsError" title="Deductions must be a number">&#9888;<span class="error-tooltip">Enter only integers</span></span>
-            </div>
+  
+          <div class="form-group">
+            <label for="deductions">Deductions:
+              <span id="deductionsinfo">?</span>
+            </label>
+            <div id="infoBoxd">Subtracted from taxable income: eligible expenses.</div>
+            <input type="text" id="deductions" name="deductions" class="form-control" title="Deductions must be a number">
           </div>
-        </div>
-
-        <div class="form-group">
-          <label for="age">Age:</label>
-          <select id="age" name="age" class="form-control" placeholder="Select">
-            <option value="<40">&lt;40</option>
-            <option value=">=40 <60">&ge;40 &lt;60</option>
-            <option value=">=60">&ge;60</option>
-          </select>
-        </div>
-
-        <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
-      </form>
+  
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <select id="age" name="age" class="form-control" placeholder="Age">
+              <option value="<40">&lt;40</option>
+              <option value=">=40 <60">&ge;40 &lt;60</option>
+              <option value=">=60">&ge;60</option>
+            </select>
+          </div>
+  
+          <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Final Values</h2>
-    <p id="taxResult"></p>
+  
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Final Values</h2>
+      <p id="taxResult"></p>
+    </div>
   </div>
-</div>
+  
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
