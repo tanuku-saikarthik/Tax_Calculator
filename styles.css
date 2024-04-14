@@ -1,12 +1,9 @@
-/* styles.css */
 
-/* Body Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
 }
 
-/* Container Styles */
 .container {
   margin-top: 50px;
 }
@@ -17,7 +14,7 @@ body {
   padding: 10px;
 }
 
-/* Form Styles */
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -42,10 +39,21 @@ body {
   display: block;
 }
 
-/* Modal Styles */
-/* styles.css */
+.error-tooltip {
+  position: absolute;
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+  z-index: 1;
+}
 
-/* Modal Styles */
+.input-group-text:hover .error-tooltip {
+  display: block;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -60,13 +68,11 @@ body {
 
 .modal-content {
   background-color: #fefefe;
-  margin: auto; /* Center the modal horizontally */
+  margin: auto; 
   padding: 20px;
   border: 1px solid #888;
   border-radius: 5px;
-  max-width: 400px; /* Limit the maximum width of the modal */
-  
-  /* Center the modal vertically and horizontally */
+  max-width: 400px; 
   position: absolute;
   top: 50%;
   left: 50%;
@@ -91,7 +97,7 @@ body {
 {
   background-color: rgb(100, 0, 251);
 }
-/* Media Query for Small Devices */
+
 @media (max-width: 576px) {
   .container {
     margin-top: 20px;
@@ -99,18 +105,25 @@ body {
 }
 
 
-   /* Error Tooltip Styles */
-    .error-tooltip {
-      position: absolute;
-      background-color: #dc3545;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 14px;
-      display: none;
-      z-index: 1;
-    }
+#incomeinfo, #extrainfo, #deductionsinfo {
+  cursor: pointer; 
+  border: 2px solid rgb(100, 0, 251); 
+  display: inline-block;
+  text-align: center; 
+  line-height: 1;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 100%; 
 
-    .input-group-text:hover .error-tooltip {
-      display: block;
-    }
+}
+
+
+#infoBox,#infoBoxe,#infoBoxd {
+  display: none; 
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
