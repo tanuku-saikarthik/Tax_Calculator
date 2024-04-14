@@ -6,23 +6,6 @@
   <title>Tax Calculation</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Error Tooltip Styles */
-    .error-tooltip {
-      position: absolute;
-      background-color: #dc3545;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 14px;
-      display: none;
-      z-index: 1;
-    }
-
-    .input-group-text:hover .error-tooltip {
-      display: block;
-    }
-  </style>
 </head>
 <body>
 
@@ -63,6 +46,7 @@
         <div class="form-group">
           <label for="age">Age:</label>
           <select id="age" name="age" class="form-control">
+            <option value="">Age</option>
             <option value="<40">&lt;40</option>
             <option value=">=40 <60">&ge;40 &lt;60</option>
             <option value=">=60">&ge;60</option>
