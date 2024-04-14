@@ -11,31 +11,29 @@ $(document).ready(function() {
     ageErrorElement: $('#ageError')
   };
 
-
-    $("#incomeinfo").hover(function() {
-        $("#infoBox").css("display", "block");
-    }, function() {
-        $("#infoBox").css("display", "none");
-    });
-
-    $("#extrainfo").hover(function() {
-      $("#infoBoxe").css("display", "block");
-  }, function() {
-      $("#infoBoxe").css("display", "none");
-  });
-
-  $("#deductionsinfo").hover(function() {
-    $("#infoBoxd").css("display", "block");
+  $("#incomeinfo").hover(function() {
+    $("#infoBox").css("display", "block");
 }, function() {
-    $("#infoBoxd").css("display", "none");
+    $("#infoBox").css("display", "none");
 });
 
+$("#extrainfo").hover(function() {
+  $("#infoBoxe").css("display", "block");
+}, function() {
+  $("#infoBoxe").css("display", "none");
+});
 
-  
+$("#deductionsinfo").hover(function() {
+$("#infoBoxd").css("display", "block");
+}, function() {
+$("#infoBoxd").css("display", "none");
+});
+  // Event listener for form submission
   $('#submitBtn').on('click', function() {
     validateForm(elements);
   });
 
+  // Event listeners for input fields
   elements.incomeInput.on('input', function() {
     validateInput(elements.incomeInput, elements.incomeErrorElement);
   });
@@ -144,11 +142,7 @@ function calculateTax(totalIncome, ageGroup) {
 function showModal(tax) {
   const modal = $('#modal');
   const taxResult = $('#taxResult');
-  if(tax === 0)
-  {
-    taxResult.text("Your overall income will be: " + tax.toFixed(2) + " Lakhs");
-  }
-  taxResult.text("Your overall income will be: " + tax.toFixed(2) + " Lakhs");
+  taxResult.text("Tax to be paid: " + tax.toFixed(2) + " Lakhs");
   modal.css('display', 'block');
 }
 
