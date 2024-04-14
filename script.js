@@ -129,7 +129,7 @@ function showInputError(errorElement, errorMessage) {
 function showModal(tax) {
   const modal = $('#modal');
   const taxResult = $('#taxResult');
-  if (tax === 0) {
+  if (tax === 0.00) {
     taxResult.text("No tax");
   } else {
     taxResult.text("Tax to be paid: " + tax.toFixed(2) + " Lakhs");
