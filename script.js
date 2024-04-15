@@ -105,13 +105,13 @@ function validateForm(elements) {
 }
 
 function calculateTax(totalIncome, ageGroup) {
-  if (totalIncome > 8) {
+  if (totalIncome > 800000) {
     if (ageGroup === "<40") {
-      return 0.3 * (totalIncome - 8);
+      return 0.3 * (totalIncome - 800000);
     } else if (ageGroup === ">=40 <60") {
-      return 0.4 * (totalIncome - 8);
+      return 0.4 * (totalIncome - 800000);
     } else if (ageGroup === ">=60") {
-      return 0.1 * (totalIncome - 8);
+      return 0.1 * (totalIncome - 800000);
     }
   }
   return 0;
