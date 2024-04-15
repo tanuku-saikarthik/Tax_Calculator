@@ -156,7 +156,7 @@ function showInputError(errorElement, errorMessage) {
 function showModal(tax) {
   const modal = $('#modal');
   const taxResult = $('#taxResult');
-  taxResult.text( tax.toFixed(5) *10000);
+  taxResult.text( "Tax to be paid:" + tax.toFixed(5) *10000);
   modal.css('display', 'block');
 }
 
