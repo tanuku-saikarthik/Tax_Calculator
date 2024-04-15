@@ -160,7 +160,7 @@ function formatTaxValue(tax) {
 function showModal(tax) {
     const modal = $('#modal');
     const taxResult = $('#taxResult');
-    taxResult.text("Tax to be paid: " + formatTaxValue(tax) + " Lakhs");
+    taxResult.text("Tax to be paid: " + formatTaxValue(tax));
     modal.css('display', 'block');
 }
 
