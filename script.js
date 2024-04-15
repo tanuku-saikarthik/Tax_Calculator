@@ -126,19 +126,25 @@ function showInputError(errorElement, errorMessage) {
   errorElement.css('display', 'inline');
 }
 
+function calculateTax(totalIncome, ageGroup) {
+  if (totalIncome > 8) {
+    if (ageGroup === "<40") {
+      return 0.3 * (totalIncome - 8);
+    } else if (ageGroup === ">=40 <60") {
+      return 0.4 * (totalIncome - 8);
+    } else if (ageGroup === ">=60") {
+      return 0.1 * (totalIncome - 8);
+    }
+  }
+  return 0;
+}
+
 function showModal(tax) {
   const modal = $('#modal');
   const taxResult = $('#taxResult');
-  if (tax === 0.00) {
-    taxResult.text("No tax");
-  } else {
-    taxResult.text("Tax to be paid: " + tax.toFixed(2) + " Lakhs");
-  }
+  taxResult.text("Tax to be paid: " + tax.toFixed(2) + " Lakhs");
   modal.css('display', 'block');
 }
-
-
-
 
 function closeModal() {
   $('#modal').css('display', 'none');
