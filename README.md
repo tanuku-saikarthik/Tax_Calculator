@@ -36,8 +36,10 @@ To run this web application locally, follow these steps:
 
 5.When hovered on question mark , it will give the info about the textbar:
 ![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/fbe4a0ab-31d5-4283-b13a-6a4b1cc3a588)
-![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/3dfb4396-95c2-4bc5-9605-9db645facb0c)
-![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/4c8ffebe-5c52-4520-b30a-8c9ae73e5dea)
+![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/69e60cb6-a9cc-42d3-bce8-b6483f769d39)
+![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/1790ac5a-5923-4f91-a7ba-24c542ac1d78)
+
+
 
 
 
