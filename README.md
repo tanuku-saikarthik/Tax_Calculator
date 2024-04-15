@@ -39,6 +39,8 @@ To run this web application locally, follow these steps:
 ![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/69e60cb6-a9cc-42d3-bce8-b6483f769d39)
 ![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/1790ac5a-5923-4f91-a7ba-24c542ac1d78)
 
+6.When Global Annual Income= 32,00,000, Extra Income=8,00,000 and Dedutions= 16,00,000:
+
 
 
 
