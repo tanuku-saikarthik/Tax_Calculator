@@ -153,12 +153,17 @@ function showInputError(errorElement, errorMessage) {
 }
 
 
-function showModal(tax) {
-  const modal = $('#modal');
-  const taxResult = $('#taxResult');
-  taxResult.text( "Tax to be paid: ₹ " + tax);
-  modal.css('display', 'block');
+function formatTaxValue(tax) {
+    return "₹ " + tax.toFixed(2).replace(/\d(?=(\d{2})+\.)/g, '$&,');
 }
+
+function showModal(tax) {
+    const modal = $('#modal');
+    const taxResult = $('#taxResult');
+    taxResult.text("Tax to be paid: " + formatTaxValue(tax) + " Lakhs");
+    modal.css('display', 'block');
+}
+
 
 function closeModal() {
   $('#modal').css('display', 'none');
