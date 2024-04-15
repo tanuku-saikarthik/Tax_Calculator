@@ -1,4 +1,4 @@
-# Tax_Calculator
+# Tax Calculator
 
 This is a simple web application for calculating taxes based on income, extra income, deductions, and age.
 
