@@ -13,7 +13,6 @@ To run this web application locally, follow these steps:
 
 2.Navigate to the project directory:
 
-   ```bash
    cd Tax-Calculator
 
 3.Open the index.html file in a web browser.
