@@ -29,6 +29,7 @@ To run this web application locally, follow these steps:
 3.When input fields contain negative values.
 ![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/3b9c2459-d6c4-4b16-90b0-843ceea89669)
 
-4.
+4.When input in Global Annual Income is filled with **negative integers** and Extra Income with **chars**:
+![image](https://github.com/tanuku-saikarthik/Tax_Calculator/assets/114074156/8a022a41-f6e0-4525-b77b-2ca77f62ddd0)
 
 
