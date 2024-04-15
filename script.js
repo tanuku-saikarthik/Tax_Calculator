@@ -91,6 +91,19 @@ function validateForm(elements) {
   }
 }
 
+function calculateTax(totalIncome, ageGroup) {
+  if (totalIncome > 8) {
+    if (ageGroup === "<40") {
+      return 0.3 * (totalIncome - 8);
+    } else if (ageGroup === ">=40 <60") {
+      return 0.4 * (totalIncome - 8);
+    } else if (ageGroup === ">=60") {
+      return 0.1 * (totalIncome - 8);
+    }
+  }
+  return 0;
+}
+
 function validateInput(input, errorElement) {
   if (input.val().trim() === '') {
     $(".error-tooltip", errorElement.parent()).text("Please enter a value.");
@@ -126,18 +139,6 @@ function showInputError(errorElement, errorMessage) {
   errorElement.css('display', 'inline');
 }
 
-function calculateTax(totalIncome, ageGroup) {
-  if (totalIncome > 8) {
-    if (ageGroup === "<40") {
-      return 0.3 * (totalIncome - 8);
-    } else if (ageGroup === ">=40 <60") {
-      return 0.4 * (totalIncome - 8);
-    } else if (ageGroup === ">=60") {
-      return 0.1 * (totalIncome - 8);
-    }
-  }
-  return 0;
-}
 
 function showModal(tax) {
   const modal = $('#modal');
