@@ -13,21 +13,22 @@ $(document).ready(function() {
 
   $("#incomeinfo").hover(function() {
     $("#infoBox").css("display", "block");
-}, function() {
+  }, function() {
     $("#infoBox").css("display", "none");
-});
+  });
 
-$("#extrainfo").hover(function() {
-  $("#infoBoxe").css("display", "block");
-}, function() {
-  $("#infoBoxe").css("display", "none");
-});
+  $("#extrainfo").hover(function() {
+    $("#infoBoxe").css("display", "block");
+  }, function() {
+    $("#infoBoxe").css("display", "none");
+  });
 
-$("#deductionsinfo").hover(function() {
-$("#infoBoxd").css("display", "block");
-}, function() {
-$("#infoBoxd").css("display", "none");
-});
+  $("#deductionsinfo").hover(function() {
+    $("#infoBoxd").css("display", "block");
+  }, function() {
+    $("#infoBoxd").css("display", "none");
+  });
+
   // Event listener for form submission
   $('#submitBtn').on('click', function() {
     validateForm(elements);
@@ -80,10 +81,22 @@ function validateForm(elements) {
     const isDeductionsValid = elements.deductionsInput.val().trim() === '' || validateInput(elements.deductionsInput, elements.deductionsErrorElement);
     const isAgeValid = validateAge(elements);
 
+    // Check if deductions exceed gross income + extra income
+    const grossIncome = parseFloat(elements.incomeInput.val() || 0);
+    const extraIncome = parseFloat(elements.extraIncomeInput.val() || 0);
+    const deductions = parseFloat(elements.deductionsInput.val() || 0);
+    const totalIncome = grossIncome + extraIncome;
+
     if (isIncomeValid && isExtraIncomeValid && isDeductionsValid && isAgeValid) {
+      if (deductions > totalIncome) {
+        alert("Deductions cannot exceed Gross Income plus Extra Income");
+        showError(elements.errorMessage, "Deductions cannot exceed Gross Income plus Extra Income.");
+        return;// Exit the function if there's an error
+      }
+
       hideError(elements.errorMessage);
-      const totalIncome = parseFloat(elements.incomeInput.val() || 0) + parseFloat(elements.extraIncomeInput.val() || 0) - parseFloat(elements.deductionsInput.val() || 0);
-      const tax = calculateTax(totalIncome, elements.ageSelect.val());
+      
+      const tax = calculateTax(totalIncome - deductions, elements.ageSelect.val());
       showModal(tax);
     } else {
       showError(elements.errorMessage, "Please fill in all required fields.");
