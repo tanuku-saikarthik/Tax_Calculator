@@ -11,10 +11,10 @@ To run this web application locally, follow these steps:
    ```bash
    git clone https://github.com/tanuku-saikarthik/Tax-Calculator.git
 
-Navigate to the project directory:
+2.Navigate to the project directory:
 
 cd Tax-Calculator
 
-Open the index.html file in a web browser.
+4.Open the index.html file in a web browser.
 
-Enter the required information (Gross Annual Income, Extra Income, Deductions, and Age) and click on the "Submit" button to see the result.
+5.Enter the required information (Gross Annual Income, Extra Income, Deductions, and Age) and click on the "Submit" button to see the result.
