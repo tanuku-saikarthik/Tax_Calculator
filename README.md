@@ -10,11 +10,13 @@ To run this web application locally, follow these steps:
 
 ```bash
 git clone https://github.com/tanuku-saikarthik/Tax-Calculator.git
+```bash
 
 2.Navigate to the project directory:
 
 ```bash
 cd tax-calculation-web-app
+```bash
 
 3.Open the index.html file in a web browser.
 
